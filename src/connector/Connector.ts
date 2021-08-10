@@ -238,12 +238,12 @@ export class Connector extends EventEmitter {
      * @returns {function}
      */
     private onTimeout(): void {
+        this.destroy();
         this.emit(
             'timeout',
             new RosException('SOCKTMOUT', { seconds: this.timeout }),
             this,
         );
-        this.destroy();
     }
 
     /**
