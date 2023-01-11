@@ -221,13 +221,13 @@ export class Connector extends EventEmitter {
      * @returns {function}
      */
     private onError(err: any): void {
-        this.destroy();
         err = new RosException(err.errno, err);
         error(
             'Problem while trying to connect to %s. Error: %s',
             this.host,
             err.message,
         );
+        this.destroy();
         this.emit('error', err, this);
     }
 
