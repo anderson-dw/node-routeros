@@ -10,10 +10,6 @@
         "tsc:build": "rimraf ./dist && tsc",
         "tsc:build:watch": "rimraf ./dist && tsc -w"
     },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:aluisiora/node-routeros.git"
-    },
     "keywords": [
         "routeros",
         "routerboard",
