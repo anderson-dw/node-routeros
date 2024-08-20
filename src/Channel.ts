@@ -48,7 +48,7 @@ export class Channel extends EventEmitter {
         super();
         this.id = Math.random().toString(36).substring(3);
         this.connector = connector;
-        this.once('unknown', this.onUnknown.bind(this));
+        // this.once('unknown', this.onUnknown.bind(this));
     }
 
     /**
